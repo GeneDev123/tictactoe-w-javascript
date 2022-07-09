@@ -28,7 +28,7 @@ function renderCircle(x, y){
 function renderGame(){
     let canvas = document.getElementById("game");
     
-    // Render the grid.
+    // Render the grid. 
     let grid = canvas.getContext("2d");
     grid.moveTo(100,0);
     grid.lineTo(100,300);

@@ -44,11 +44,7 @@ function startAiGame(){
     renderCross(200,200);
 
     renderCircle(150,50);
-    // let winner = "none";
-    // while(winner === "none"){
-
-        
-    // }
+    
 }
 
 // Win conditions
