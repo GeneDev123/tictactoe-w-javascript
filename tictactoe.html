@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TicTacToe</title>
+    
+    <script src='menu.js'></script>
+    <script src='render.js'></script>
+    <script src='main.js'></script>
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        TIC TAC TOE Game by: GeneDev123
+    </header>
+
+    <!--Contains the render of the game-->
+    <article>
+        <canvas id="game" width="300" height="300" style="border:1px solid #000000;">
+            <table>
+        
+            </table>
+        </canvas>
+
+    </article>
+    
+    <!--Contains UI controls and inputs -->
+    <aside id="menu">
+        <div id="play_option" onclick="gmode()">
+            <p>Play with AI or player2?</p> 
+            <button id="ai">AI</button>
+            <button id="p2">Player 2</button>    
+        </div>
+    </aside>
+</body>
+</html>
