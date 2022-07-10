@@ -45,4 +45,5 @@ function renderGame(){
     grid.moveTo(0,200);
     grid.lineTo(300,200);
     grid.stroke();
+
 }
