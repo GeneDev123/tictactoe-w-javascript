@@ -19,7 +19,6 @@ p_vs_ai.prototype.attack = function(i){
         renderCross(boardPos[i][0],boardPos[i][1]);
         this.actions[i]  = 1;
     }  
-    console.log(this.actions);
 }
 
 // Enemy AI attack
@@ -29,7 +28,7 @@ function aiAttack(player){
         if(player.actions[i] === 0){
             player.actions[i] = 2;
             if(player.marker === "circle"){
-                renderCross(boardPos[i][0] + 50,boardPos[i][1] + 50);
+                renderCross(boardPos[i][0],boardPos[i][1]);
             }else{
                 renderCircle(boardPos[i][0] + 50,boardPos[i][1] + 50); 
             }
@@ -98,7 +97,12 @@ function startAiGame(){
     let canvas = document.getElementById("game");
     canvas.addEventListener('click',function(e){
         let pos_click = getPosition(e.clientX, e.clientY);
+        
+        
+        // Turn based attack of player and enemy
         player.attack(pos_click);
+        console.log(player.actions);
         aiAttack(player);
+        console.log(player.actions);
     });
 }
