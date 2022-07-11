@@ -24,6 +24,10 @@ p_vs_ai.prototype.attack = function(i){
 // Enemy AI attack
 function aiAttack(player){
     while(true){
+        if(player.actions.includes(0) === false){
+            console.log("Tie");
+            break;
+        }
         let i = Math.floor(Math.random() * 9);    
         if(player.actions[i] === 0){
             player.actions[i] = 2;
